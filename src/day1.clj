@@ -27,7 +27,7 @@
                        (sort (aoc-day1-2-list list)))))
 
 (comment
-     (aoc-day1 day1-input)
-     (aoc-day2 day1-input))
+     (aoc-day1-qst2 day1-input)
+     (aoc-day1-qst1 day1-input))
 
 
