@@ -16,6 +16,17 @@
          (map set)
          (apply set/intersection))))
 
+(defn backpack-section-2
+  [backpack]
+  (let [half (/ (count backpack) 2)]
+    (->> backpack
+     (vector (take half backpack) (drop half backpack))
+         (map set)
+         (apply set/intersection))))
+
+
+
+
 (defn sum
   [items]
   (reduce
@@ -33,7 +44,7 @@
 (defn day3-part1
   [input]
   (->> input
-       (map backpack-section)
+       (map backpack-section-2)
        (map sum)
        (apply +)))
 
@@ -49,3 +60,4 @@
 
 (day3-part1 day3-input)
 (day3-part2 day3-input)
+
