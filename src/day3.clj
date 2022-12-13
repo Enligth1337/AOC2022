@@ -22,6 +22,10 @@
     (fn [sum item]
       (+ sum (get item-priorities (int item)))) 0 items))
 
+(defn badge
+  [input]
+  (apply set/intersection input))
+
 (def day3-input
   (->> (slurp "src/day3")
        (str/split-lines)))
@@ -33,5 +37,15 @@
        (map sum)
        (apply +)))
 
-(day3-part1 day3-input)
+(defn day3-part2
+  [input]
+  (->> input
+       (map set)
+       (partition 3)
+       (map badge)
+       (map first)
+       (sum)))
 
+
+(day3-part1 day3-input)
+(day3-part2 day3-input)
