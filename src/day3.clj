@@ -24,9 +24,6 @@
          (map set)
          (apply set/intersection))))
 
-
-
-
 (defn sum
   [items]
   (reduce
@@ -56,7 +53,6 @@
        (map badge)
        (map first)
        (sum)))
-
 
 (day3-part1 day3-input)
 (day3-part2 day3-input)
